@@ -5,7 +5,7 @@ plugins {
     id 'com.gradle.plugin-publish' version '1.1.0'
 }
 
-group 'io.github'
+group 'io.github.mybatis-generator'
 version '1.0'
 
 repositories {
@@ -32,7 +32,7 @@ gradlePlugin {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'io.github'
+            groupId = 'io.github.mybatis-generator'
             artifactId = 'mybatis-generator-plugin'
             version = '1.0'
 
@@ -43,4 +43,11 @@ publishing {
 
 test {
     useJUnitPlatform()
+}
+
+pluginBundle {
+    website = "https://github.com/zhaihui85/mybatis-generator-plugin"
+    vcsUrl = "https://github.com/zhaihui85/mybatis-generator-plugin"
+    description = "MyBatis Generator for gradle plugin"
+    tags = ['mybatis', 'generator']
 }
